@@ -40,7 +40,7 @@ for ego in egos:
 
     with open(expanduser('~/results/jsons_horodates/%s.csv' % ego), 'w') as sortie:
         csv_writer = csv.writer(sortie, delimiter = ';')
-        with gzip.open(expanduser('~/data/all/%s/statuses.jsons.gz' % ego)), 'r') as entree:
+        with gzip.open(expanduser('~/data/all/%s/statuses.jsons.gz' % ego), 'r') as entree:
 
             for line_temp in entree:
                 line = json.loads(line_temp)
