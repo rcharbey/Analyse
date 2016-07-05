@@ -54,6 +54,5 @@ for ego in list_egos:
                     temp.append(line['id'])
                     temp.append('')
                     temp.append(annee)
-                    temp.append(datetime.fromtimestamp(int(line['created'])/1000))
                     temp.append(line)
                     csv_writer.writerow(temp)
