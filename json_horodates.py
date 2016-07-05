@@ -36,7 +36,7 @@ for ego in list_egos:
         csv_reader = csv.reader(fichier_1, delimiter =';')
         csv_reader.next()
         for line in csv_reader:
-            dicto[line[1]] = [line[1], line[2], line[3]]
+            dicto[line[2] = [line[2], line[16]]
 
     with open(expanduser('~/results/jsons_horodates/%s.csv' % ego), 'w') as sortie:
         csv_writer = csv.writer(sortie, delimiter = ';')
@@ -45,6 +45,7 @@ for ego in list_egos:
             for line_temp in entree:
                 line = json.loads(line_temp)
                 annee = str(datetime.fromtimestamp(int(line['created'])/1000)).split(' ')[0].split('-')[0]
+                dicto[line['id']].append(annee)
                 if line['id'] in dicto:
                     dicto[line['id']].append(line)
                     csv_writer.writerow(dicto[line['id']])
