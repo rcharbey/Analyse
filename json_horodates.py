@@ -30,7 +30,7 @@ list_egos = [
              '92a654159280eb61128c7b50203eb5b9'
              ]
 
-for ego in egos:
+for ego in list_egos:
     dicto = {}
     with open(expanduser('~/STATUSES-CSV/%s.csv' % ego), 'r') as fichier_1:
         csv_reader = csv.reader(fichier_1, delimiter =';')
