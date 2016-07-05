@@ -26,7 +26,6 @@ def get_data():
                 i += 1
             except:
                 continue
-        print i
     return result, headers
 
 rought_data, headers = get_data()

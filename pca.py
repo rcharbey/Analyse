@@ -5,7 +5,6 @@ Created on Tue Jun 14 10:07:24 2016
 """
 
 from os.path import expanduser
-#file_in = expanduser("~/Analyse/Results/quartiles.csv")
 file_in = expanduser("~/Analyse/Results/quintiles.csv")
 import numpy as NP
 from scipy import linalg as LA
