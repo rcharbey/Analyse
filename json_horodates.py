@@ -45,14 +45,15 @@ for ego in list_egos:
             for line_temp in entree:
                 line = json.loads(line_temp)
                 annee = str(datetime.fromtimestamp(int(line['created'])/1000)).split(' ')[0].split('-')[0]
-                dicto[line['id']].append(annee)
                 if line['id'] in dicto:
+                    dicto[line['id']].append(annee)
                     dicto[line['id']].append(line)
                     csv_writer.writerow(dicto[line['id']])
                 else:
                     temp = []
                     temp.append(line['id'])
                     temp.append('')
+                    temp.append(annee)
                     temp.append(datetime.fromtimestamp(int(line['created'])/1000))
                     temp.append(line)
                     csv_writer.writerow(temp)
