@@ -36,7 +36,7 @@ for ego in list_egos:
         csv_reader = csv.reader(fichier_1, delimiter =';')
         csv_reader.next()
         for line in csv_reader:
-            dicto[line[2] = [line[2], line[16]]
+            dicto[line[2]] = [line[2], line[16]]
 
     with open(expanduser('~/results/jsons_horodates/%s.csv' % ego), 'w') as sortie:
         csv_writer = csv.writer(sortie, delimiter = ';')
