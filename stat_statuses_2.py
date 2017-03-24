@@ -106,7 +106,7 @@ csv_writer_aver = csv.writer(print_aver, delimiter = ';')
 csv_writer_med = csv.writer(print_med, delimiter = ';')
 
 temp = ['guessed_type', 'nb_of_statuses']
-temp.extend([indic for indic in utils.list_indics_to_consider])
+temp.extend([indic for indic in LIST_INDICS_OK])
 
 csv_writer_aver.writerow(temp)
 csv_writer_med.writerow(temp)
@@ -114,7 +114,7 @@ csv_writer_med.writerow(temp)
 for gt in info_per_gt:
     temp_aver = [gt + ' aver', info_per_gt[gt]['nb']]
     temp_med = [gt + ' med', info_per_gt[gt]['nb']]
-    for indic in utils.list_indics_to_consider:
+    for indic in LIST_INDICS_OK:
         if indic == 'nb':
             continue
         temp_list = [float(x) for x in info_per_gt[gt][indic] if not 'bug' in x]
