@@ -50,10 +50,10 @@ def constraints_ok(line):
         return False
     if line == ['\n']:
         return False
-    if non_friends_com and int(line[LIST_INDICS_OK.index('non_friend_commenters')]) != 0:
+    if non_friends_com and int(line[ATTRS_STATUSES.index('non_friend_commenters')]) != 0:
         return False
     print line
-    if one_com and int(line[LIST_INDICS_OK.index('nb_comments')]) < 1:
+    if one_com and int(line[ATTRS_STATUSES.index('nb_comments')]) < 1:
         return False
     return True
 
@@ -79,7 +79,7 @@ for file_ego in list_file_ego:
         indic_to_id = {}
         list_indics = data_in.readline().split(';')
         for indic in LIST_INDICS_OK :
-            indic_to_id[indic] = list_indics.index(indic)
+            indic_to_id[indic] = ATTRS_STATUSES.index(indic)
 
         for line in data_in:
             data = line.split(';')
