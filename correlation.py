@@ -22,7 +22,7 @@ def get_data():
             if not line:
                 continue
             try:
-                result.append([round(float(x),4) for x in line])
+                result.append([float(x) for x in line])
                 i += 1
             except:
                 continue
