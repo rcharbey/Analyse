@@ -112,6 +112,8 @@ csv_writer_aver.writerow(temp)
 csv_writer_med.writerow(temp)
 
 for gt in info_per_gt:
+    print gt
+    print info_per_gt[gt]
     temp_aver = [gt + ' aver', info_per_gt[gt]['nb']]
     temp_med = [gt + ' med', info_per_gt[gt]['nb']]
     for indic in LIST_INDICS_OK:
@@ -131,7 +133,6 @@ for gt in info_per_gt:
         temp_med.append(round(med_tab, 5))
 
     csv_writer_aver.writerow(temp_aver)
-    print temp_aver
     csv_writer_med.writerow(temp_med)
 
 print_aver.close()
