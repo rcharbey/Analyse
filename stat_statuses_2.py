@@ -69,7 +69,7 @@ if non_friends_com:
     to += '_non_friends'
 
 
-list_file_ego = [file_ego in os.listdir('../results/Statuses_indicators') if '.csv' in file_ego]
+list_file_ego = [file_ego for file_ego in os.listdir('../results/Statuses_indicators') if '.csv' in file_ego]
 
 for file_ego in list_file_ego:
     with open('../results/Statuses_indicators/%s' % file_ego, 'r') as data_in:
