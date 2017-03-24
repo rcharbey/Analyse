@@ -41,7 +41,7 @@ LIST_INDICS_OK = ['guessed_type', 'nb_comments', 'nb_commenters', 'autocomments'
               'nb_rare_comments', 'norm_rare_comments', 'nb_rare_commenters', 'nb_rare_likes', 'norm_rare_likes',
               'surprise_comments', 'surprise_likes', 'distance', 'norm_distance', 'distance_ego_included',
               'norm_distance_ego_included', 'path_dependency', 'norm_path_dependency', 'start_dependency',
-              'norm_start_dependency', 'prev_dependency', 'norm_prev_dependency', 'burstiness', 'norm_burstiness',
+              'norm_start_dependency', 'prev_dependency', 'norm_prev_dependency', 'burstiness_50', 'norm_burstiness_50',
               'simple_burstiness', 'lifetime', 'quintile_comments', 'quintile_likes', 'plurality'
 ]
 
