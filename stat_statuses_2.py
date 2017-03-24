@@ -72,7 +72,7 @@ if non_friends_com:
 
 list_file_ego = [file_ego for file_ego in os.listdir('../results/Statuses_indicators') if '.csv' in file_ego]
 
-for file_ego in list_file_ego:
+for file_ego in list_file_ego[0:10]:
     with open('../results/Statuses_indicators/%s' % file_ego, 'r') as data_in:
 
         indic_to_id = {}
@@ -98,6 +98,8 @@ for file_ego in list_file_ego:
                 indic_value = data[id_indic]
                 if indic_value != '_' and indic_value != '':
                     info[indic].append(indic_value)
+
+print info_per_gt
 
 
 print_aver = open('Results/%s_indics_per_gt%s_aver.csv' % (origin, to), 'w')
