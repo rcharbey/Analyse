@@ -35,7 +35,7 @@ ATTRS_STATUSES = [
               'message', 'text_comments',
               ]
 
-LIST_INDICS_OK = ['guessed_type', 'nb_of_statuses','nb_comments', 'nb_commenters', 'autocomments', 'friend_commenters',
+LIST_INDICS_OK = ['guessed_type', 'nb_comments', 'nb_commenters', 'autocomments', 'friend_commenters',
               'friend_comments', 'non_friend_commenters', 'non_friend_comments', 'nb_likes', 'autolike', 'friend_likes',
               'non_friend_likes', 'rarity_comments', 'norm_rarity_comments', 'rarity_likes', 'norm_rarity_likes',
               'nb_rare_comments', 'norm_rare_comments', 'nb_rare_commenters', 'nb_rare_likes', 'norm_rare_likes',
