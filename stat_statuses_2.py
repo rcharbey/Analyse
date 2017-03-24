@@ -72,7 +72,7 @@ if non_friends_com:
 
 list_file_ego = [file_ego for file_ego in os.listdir('../results/Statuses_indicators') if '.csv' in file_ego]
 
-for file_ego in list_file_ego[0:10]:
+for file_ego in list_file_ego:
     with open('../results/Statuses_indicators/%s' % file_ego, 'r') as data_in:
 
         indic_to_id = {}
@@ -112,8 +112,6 @@ csv_writer_aver.writerow(temp)
 csv_writer_med.writerow(temp)
 
 for gt in info_per_gt:
-    print gt
-    print info_per_gt[gt]
     temp_aver = [gt + ' aver', info_per_gt[gt]['nb']]
     temp_med = [gt + ' med', info_per_gt[gt]['nb']]
     for indic in LIST_INDICS_OK:
