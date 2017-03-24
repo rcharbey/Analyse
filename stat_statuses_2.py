@@ -35,7 +35,7 @@ ATTRS_STATUSES = [
               'message', 'text_comments',
               ]
 
-LIST_INDICS_OK = ['guessed_type', 'nb_comments', 'nb_commenters', 'autocomments', 'friend_commenters',
+LIST_INDICS_OK = ['nb_comments', 'nb_commenters', 'autocomments', 'friend_commenters',
               'friend_comments', 'non_friend_commenters', 'non_friend_comments', 'nb_likes', 'autolike', 'friend_likes',
               'non_friend_likes', 'rarity_comments', 'norm_rarity_comments', 'rarity_likes', 'norm_rarity_likes',
               'nb_rare_comments', 'norm_rare_comments', 'nb_rare_commenters', 'nb_rare_likes', 'norm_rare_likes',
@@ -99,9 +99,6 @@ for file_ego in list_file_ego[0:10]:
                 if indic_value != '_' and indic_value != '':
                     info[indic].append(indic_value)
 
-print info_per_gt
-
-
 print_aver = open('Results/%s_indics_per_gt%s_aver.csv' % (origin, to), 'w')
 print_med = open('Results/%s_indics_per_gt%s_med.csv' % (origin, to), 'w')
 
@@ -134,6 +131,7 @@ for gt in info_per_gt:
         temp_med.append(round(med_tab, 5))
 
     csv_writer_aver.writerow(temp_aver)
+    print temp_aver
     csv_writer_med.writerow(temp_med)
 
 print_aver.close()
