@@ -8,6 +8,7 @@ Created on Tue Dec 15 14:21:30 2015
 import csv
 import numpy as np
 import utils
+import os
 
 ATTRS_STATUSES = [
               'ego_id', 'guessed_type', 'date',
