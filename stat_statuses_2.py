@@ -85,7 +85,7 @@ for file_ego in list_file_ego:
             if not constraints_ok(data):
                 continue
 
-            gt = data[indic_to_gt['guessed_type']]
+            gt = data[indic_to_id['guessed_type']]
 
             if not gt in info_per_gt:
                 info_per_gt[gt] = dict((indic, []) for indic in LIST_INDICS_OK)
