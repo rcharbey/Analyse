@@ -50,9 +50,9 @@ def constraints_ok(line):
         return False
     if line == ['\n']:
         return False
-    if non_friends_com and int(line[LIST_INDICS.index('non_friend_commenters')]) != 0:
+    if non_friends_com and int(line[LIST_INDICS_OK.index('non_friend_commenters')]) != 0:
         return False
-    if one_com and int(line[LIST_INDICS.index('nb_comments')]) < 1:
+    if one_com and int(line[LIST_INDICS_OK.index('nb_comments')]) < 1:
         return False
     return True
 
