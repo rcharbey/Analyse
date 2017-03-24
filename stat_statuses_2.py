@@ -75,7 +75,7 @@ list_file_ego = [file_ego for file_ego in os.listdir('../results/Statuses_indica
 for file_ego in list_file_ego:
     with open('../results/Statuses_indicators/%s' % file_ego, 'r') as data_in:
 
-        indic_to_id = []
+        indic_to_id = {}
         list_indics = data_in.readline().split(';')
         for indic in LIST_INDICS_OK :
             indic_to_id[indic] = list_indics.index(indic)
