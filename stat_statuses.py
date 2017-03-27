@@ -114,7 +114,7 @@ for gt in info_per_gt:
     for indic in LIST_INDICS_OK:
         if indic == 'nb':
             continue
-        temp_list = [float(x) for x in info_per_gt[gt][indic] if not 'bug' in x]
+        temp_list = info_per_gt[gt][indic]
         if temp_list:
             med_tab = np.median(temp_list)
         else:
@@ -122,7 +122,7 @@ for gt in info_per_gt:
             temp_med.append('bug')
             continue
         sum_indic = sum([x for x in temp_list if not x == 'bug'])
-        average = sum_indic / float(len([x for x in temp_list if not x == 'bug'])) if len(temp_list) != 0 else 0
+        average = sum_indic / float(len(temp_list)) if len(temp_list) != 0 else 0
 
         temp_aver.append(round(average, 2))
         temp_med.append(round(med_tab, 2))
