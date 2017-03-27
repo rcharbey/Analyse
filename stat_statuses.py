@@ -121,8 +121,8 @@ for gt in info_per_gt:
             temp_aver.append('bug')
             temp_med.append('bug')
             continue
-        sum_indic = sum(temp_list)
-        average = sum_indic / float(len(temp_list)) if len(temp_list) != 0 else 0
+        sum_indic = sum([x for x in temp_list if not x == 'bug'])
+        average = sum_indic / float(len([x for x in temp_list if not x == 'bug'])) if len(temp_list) != 0 else 0
 
         temp_aver.append(round(average, 2))
         temp_med.append(round(med_tab, 2))
