@@ -97,13 +97,10 @@ for file_ego in list_file_ego:
                 id_indic = indic_to_id[indic]
                 indic_value = data[id_indic]
                 if indic_value != '_' and indic_value != '':
-                    info[indic].append(indic_value)
+                    info[indic].append(round(indic_value, 2))
 
-print_aver = open('Results/%s_indics_per_gt%s_aver.csv' % (origin, to), 'w')
-print_med = open('Results/%s_indics_per_gt%s_med.csv' % (origin, to), 'w')
-
-csv_writer_aver = csv.writer(print_aver, delimiter = ';')
-csv_writer_med = csv.writer(print_med, delimiter = ';')
+csv_writer_aver = csv.writer(open('Results/%s_indics_per_gt%s_aver.csv' % (origin, to), 'w'), delimiter = ';')
+csv_writer_med = csv.writer(open('Results/%s_indics_per_gt%s_med.csv' % (origin, to), 'w'), delimiter = ';')
 
 temp = ['guessed_type', 'nb_of_statuses']
 temp.extend([indic for indic in LIST_INDICS_OK])
@@ -127,11 +124,8 @@ for gt in info_per_gt:
         sum_indic = sum(temp_list)
         average = sum_indic / float(len(temp_list)) if len(temp_list) != 0 else 0
 
-        temp_aver.append(round(average, 5))
-        temp_med.append(round(med_tab, 5))
+        temp_aver.append(round(average, 2))
+        temp_med.append(round(med_tab, 2))
 
     csv_writer_aver.writerow(temp_aver)
     csv_writer_med.writerow(temp_med)
-
-print_aver.close()
-print_med.close()
