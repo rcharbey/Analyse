@@ -97,7 +97,7 @@ for file_ego in list_file_ego:
                 id_indic = indic_to_id[indic]
                 indic_value = data[id_indic]
                 if indic_value != '_' and indic_value != '':
-                    info[indic].append(round(indic_value, 2))
+                    info[indic].append(round(float(indic_value), 2))
 
 csv_writer_aver = csv.writer(open('Results/%s_indics_per_gt%s_aver.csv' % (origin, to), 'w'), delimiter = ';')
 csv_writer_med = csv.writer(open('Results/%s_indics_per_gt%s_med.csv' % (origin, to), 'w'), delimiter = ';')
