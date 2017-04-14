@@ -2,7 +2,7 @@ import csv
 import numpy as np
 import utils
 import os
-from os.path import splitex
+from os.path import splitext
 
 ATTRS_STATUSES = [
               'ego_id', 'guessed_type', 'date',
