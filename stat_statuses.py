@@ -2,7 +2,10 @@ import csv
 import numpy as np
 import utils
 import os
+<<<<<<< HEAD
 from os.path import splitex 
+=======
+>>>>>>> 0b3bf794f9a43977142ec77aab44cc1a999ef881
 
 ATTRS_STATUSES = [
               'ego_id', 'guessed_type', 'date',
@@ -62,7 +65,6 @@ if one_com:
     to += '_1_com'
 if non_friends_com:
     to += '_non_friends'
-
 
 list_file_ego = [file_ego for file_ego in os.listdir('../results/Statuses_indicators') if splitext(file_ego)[1] == '.csv']
 
