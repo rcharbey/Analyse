@@ -57,7 +57,7 @@ info_per_gt = {}
 
 #CONSTRAINTS
 non_friends_com = False
-one_com = True
+one_com = False
 if one_com:
     to += '_1_com'
 if non_friends_com:
